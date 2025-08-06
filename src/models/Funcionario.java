@@ -1,20 +1,19 @@
 package models;
 
-
 public class Funcionario {
-    private String cpf;
     private String nome;
     private String funcao;
+    private String cpf;
     private String dataAdmissao;
     private String dataNascimento;
     private String numeroCTPS;
     public double salarioBase;
 
     //construtor
+    public Funcionario(){}
 
-    //public Funcionario(){}
-
-    public Funcionario(String nome, String cpf, String funcao, String dataAdmissao, String dataNascimento, String numeroCTPS, double salarioBase){
+    public Funcionario(String nome, String cpf, String funcao, String dataAdmissao,
+                       String dataNascimento, String numeroCTPS, double salarioBase){
         this.setNome(nome);
         this.setCpf(cpf);
         this.setFuncao(funcao);
@@ -24,7 +23,7 @@ public class Funcionario {
         this.setSalarioBase(salarioBase);
     }
 
-    public void setNome(String nome) {
+    private void setNome(String nome){
         this.nome = nome;
     }
 
@@ -48,11 +47,11 @@ public class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    private void setCpf(String cpf){
+    private void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getCpf(){
+    public String getCpf() {
         return cpf;
     }
 
@@ -80,26 +79,26 @@ public class Funcionario {
         return salarioBase;
     }
 
-    /*@Override
+    @Override
     public String toString() {
-        return "Funcionario " +
-                "\nCpf= "+cpf+
-                "\nNome= " +nome+
-                "\nFuncao= " +funcao+
-                "\nDataAdmissao= " +dataAdmissao+
-                "\nDataNascimento= " +dataNascimento+
-                "\nNumeroCTPS= " +numeroCTPS+
-                "\nSalarioBase= " +salarioBase;
-    }*/
+        return "Funcionário: " +
+                "\nNome: " + nome +
+                "\nData Nascimento: " + dataNascimento +
+                "\nCPF: " + cpf +
+                "\nCargo: " + funcao +
+                "\nNúmero CTPS: " + numeroCTPS +
+                "\nData de Admissão: " + dataAdmissao +
+                "\nSalário Base: R$ " + salarioBase;
+    }
 
     public String imprimirFuncionario(){
-        return "Funcionario " +
-                "\nCpf= "+cpf+
-                "\nNome= " +nome+
-                "\nFuncao= " +funcao+
-                "\nDataAdmissao= " +dataAdmissao+
-                "\nDataNascimento= " +dataNascimento+
-                "\nNumeroCTPS= " +numeroCTPS+
-                "\nSalarioBase= " +salarioBase;
+        return "Funcionário: " +
+                "\nNome: " + nome +
+                "\nData Nascimento: " + dataNascimento +
+                "\nCPF: " + cpf +
+                "\nCargo: " + funcao +
+                "\nNúmero CTPS: " + numeroCTPS +
+                "\nData de Admissão: " + dataAdmissao +
+                "\nSalário Base: R$ " + salarioBase;
     }
 }
